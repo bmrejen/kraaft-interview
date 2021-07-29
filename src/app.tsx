@@ -21,7 +21,7 @@ const Footer = ({ handleAddTextMessage }: FooterProps) => {
       handleAddTextMessage(messageContent);
       setMessageContent('');
     },
-    [handleAddTextMessage, messageContent],
+    [handleAddTextMessage, messageContent], // only re-render if either of these items have changed
   );
 
   const handleValueChange = useCallback(function (event) {
@@ -62,6 +62,7 @@ const Footer = ({ handleAddTextMessage }: FooterProps) => {
 const App = () => {
   const { messages: storeMessages, users, currentUserId } = store;
   const [messages, setMessages] = useState(storeMessages);
+  console.log(store);
 
   function addTextMessage(content: string) {
     const newMessage: TextMessage = {
