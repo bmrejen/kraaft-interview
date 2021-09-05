@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 :root {
   --WHITE: #ffffff;
   --BUTTON_BACKGROUND: #2d3436;
@@ -70,4 +77,41 @@ footer {
 .conversation {
   flex: 1;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.message-sender {
+  margin-bottom: 0;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.message-content {
+  background-color: var(--MESSAGE_BACKGROUND_SELF);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.right {
+  align-items: flex-end;
+}
+
+.message img {
+  border-radius: 1rem;
+}
+
+.message-date {
+  color: var(--MESSAGE_DATE);
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 0.5rem;
 }

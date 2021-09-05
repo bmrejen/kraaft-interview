@@ -65,6 +65,7 @@ const App = () => {
   console.log(store);
 
   function addTextMessage(content: string) {
+    if (content === '') return;
     const newMessage: TextMessage = {
       id: `newMessage-${messages.length}`,
       type: 'text',
